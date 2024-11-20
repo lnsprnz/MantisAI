@@ -28,8 +28,6 @@ Applying the trained model to perform keypoint detection on new images or videos
   - **Outcomes**: By following the guide, users can develop a keypoint detection model tailored to their specific objects of interest. The repository offers scripts and notebooks to facilitate the entire workflow, from data annotation to model inference, enabling effective keypoint detection on custom datasets.
   
   - **Relation to the Project**: Adapting Keypoint Detection to from domains like human pose and face keypoint detection to any other keypoint detection task
- 
-  - **Implementation Guide**: [Link](https://keras.io/examples/vision/keypoint_detection/)
 
 - **Source 2**: [StanfordExtra]
 
