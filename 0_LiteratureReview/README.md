@@ -45,7 +45,7 @@ Applying the trained model to perform keypoint detection on new images or videos
     - Data Format: Consolidating all annotations, segmentations, and metadata into a single JSON file for ease of access.  
     - Usage Demonstration: Providing a Jupyter Notebook (`demo.ipynb`) to showcase the dataset’s utilization and visualization.
 
-- **Outcomes**:  
+  - **Outcomes**:  
   The repository offers a well-annotated dataset specifically for computer vision tasks involving animals, such as 3D reconstruction and pose estimation. Its structured format and demonstration notebook facilitate easy adoption in research workflows.
 
 - **Source 3**: [Title of Source 3]
@@ -55,7 +55,7 @@ Applying the trained model to perform keypoint detection on new images or videos
   - **Objective**:  
 The primary goal of this paper is to explore and compare state-of-the-art architectures for human pose estimation through keypoint detection using TensorFlow. The research aims to evaluate the effectiveness of different models like DeepPose, HRNet, and OpenPose for detecting body joints in humans, focusing on their performance across multiple datasets.
 
-  -**Methods**:  
+  - **Methods**:  
     - **Models**:  
       - **DeepPose**: A regression-based approach using convolutional neural networks (CNN) to estimate key body joints.
        - **HRNet**: Maintains high-resolution representations throughout the network for superior pose estimation accuracy.
