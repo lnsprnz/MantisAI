@@ -86,4 +86,4 @@ The primary goal of this paper is to explore and compare state-of-the-art archit
     - Keypoint Detection for Identifying Body Joints using TensorFlow [Link](https://dl.acm.org/doi/pdf/10.1145/3590837.3590948?casa_token=ElPrKE9p2k4AAAAA:hX18DHmKRVazLsZ6gusm59i3RhDYuEBwpQMpLkTn8ao77wVEk6DN8oLxmVHLP09YJsLdCEZexjiL)
     - A lightweight keypoint matching framework for insect wing morphometric landmark detection [Link](https://www.sciencedirect.com/science/article/abs/pii/S1574954122001443)
     - Animal Pose Estimation: Fine-tuning YOLOv8 Pose Models [Link](https://learnopencv.com/animal-pose-estimation/) [Video](https://www.youtube.com/watch?v=kb03ufEkOdA)
-      - Simalar approach as the StanfordExtra Paper/Repo with the same Dataset using yolo model & annotation instead of coco annotation which is possible easier to create from existing files of Fabian.
+      Simalar approach as the StanfordExtra Paper/Repo with the same Dataset using yolo model & annotation instead of coco annotation which is possible easier to create from existing files of Fabian.
