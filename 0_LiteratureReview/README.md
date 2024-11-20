@@ -35,6 +35,7 @@ Applying the trained model to perform keypoint detection on new images or videos
 
   - **[GitRepo](https://github.com/benjiebob/StanfordExtra)**
   - **[Paper](https://arxiv.org/abs/2007.11110)**
+  - **[Implementation Guide](https://keras.io/examples/vision/keypoint_detection/)**
   - **Objective**:  
   The primary goal of this repository is to provide a dataset of 12,000 images of dogs annotated with 2D keypoints and segmentation masks, enabling research in 3D animal reconstruction and other computer vision tasks.
 
@@ -47,11 +48,12 @@ Applying the trained model to perform keypoint detection on new images or videos
 
   - **Outcomes**:  
   The repository offers a well-annotated dataset specifically for computer vision tasks involving animals, such as 3D reconstruction and pose estimation. Its structured format and demonstration notebook facilitate easy adoption in research workflows.
+  - **Relation to the Project**: Keypoint Detection on Animal Dataset. well described.
 
 - **Source 3**: [Title of Source 3]
 
-  - **[GitRepo]()**
-  - **[Paper]()**
+  - **[Paper](https://dl.acm.org/doi/pdf/10.1145/3590837.3590948?casa_token=ElPrKE9p2k4AAAAA:hX18DHmKRVazLsZ6gusm59i3RhDYuEBwpQMpLkTn8ao77wVEk6DN8oLxmVHLP09YJsLdCEZexjiL)**
+
   - **Objective**:  
 The primary goal of this paper is to explore and compare state-of-the-art architectures for human pose estimation through keypoint detection using TensorFlow. The research aims to evaluate the effectiveness of different models like DeepPose, HRNet, and OpenPose for detecting body joints in humans, focusing on their performance across multiple datasets.
 
