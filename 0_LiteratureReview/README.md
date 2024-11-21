@@ -2,6 +2,11 @@
 
 Approaches or solutions that have been tried before on similar projects.
 
+Which are the models commonly used for my problem?
+Which format must the training data have?
+How much training data is typically used in similar problems?
+Are there pretrained models I can use for my problem?
+
 **Summary of Each Work**:
 
 - **Source 1**: Keypoint detection training using Tensorflow Object detection API
