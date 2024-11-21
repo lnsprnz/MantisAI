@@ -121,6 +121,7 @@ The model seems to be very powerful. Especially the transfer learning approach r
     - A lightweight keypoint matching framework for insect wing morphometric landmark detection [Link](https://www.sciencedirect.com/science/article/abs/pii/S1574954122001443)
     - Animal Pose Estimation: Fine-tuning YOLOv8 Pose Models [Link](https://learnopencv.com/animal-pose-estimation/) [Video](https://www.youtube.com/watch?v=kb03ufEkOdA)
       Simalar approach as the StanfordExtra Paper/Repo with the same Dataset using yolo model & annotation instead of coco annotation which is possible easier to create from existing files of Fabian.
+    - 
 
 - **Important features our model should have**
 - Visualization of the frames, including the generated tracking points for manual verification of the results
