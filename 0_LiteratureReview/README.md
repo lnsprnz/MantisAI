@@ -87,8 +87,41 @@ The primary goal of this paper is to explore and compare state-of-the-art archit
 
   - **Relation to the Project**: Overview of different Keypoint detection models. Downside: no repo attached...
 
+  - **Source 4**: DeepLabCut - Markerless animal pose estimation
+
+  - **[Link](https://https://github.com/DeepLabCut/DeepLabCut)**
+  - **Paper: [Link](https://www.nature.com/articles/s41596-019-0176-0)**
+
+  - **Objective**: The primary goal of this repository is to provide an environment (Python package) to track the posture and motion in animals, without the need of artificial points fitted on the animals (non-invasive). I strongly relies on the availability of visible points and structures that are meant to be tracked. It features frame-by-frame prediction.
+  - The model utilizes the feature detectors (ResNets + readout layers) of DeeperCut, a state-of-the-art algorithm for human pose estimation. It was then further refined using CNN (MobileNetV2s, EfficientNets) as well as the original developed EfficientNet backbone with cosine decay (DLCRNet).
+
+  - **Methods**: 
+  
+  The process includes:
+  - Data Preparation: 
+The user is able to upload one or more videos, that will be analyzed by the model. It then automatically extracts frames that reflect diversity of motions within the video.
+Annotation:
+  - Annotation:
+The user is able to put annotations on the extracted frames, which can be visually checked and corrected throughout the process. 
+  - Data Processing: 
+After creating a set of those images from different videos, the model creates a subset of training and validation frames for the upcoming training process. If the performance of the generated model is unsufficient on unseen data, it is possible to analyze the annotations within frames with poor results within the unseen data, correct it manually and feed it back into the training process to provied additional training data for further refinement.
+  - Model Configuration: 
+Adjusting the TensorFlow model configuration files to align with the custom dataset's specifications.
+  - Training: 
+The training process is using the data and configurations priorly prepared and can be expanded by manually analyzing and modifying the resulting testing results and feeding them back into the training process.
+  - Inference: 
+The model seems to be very powerful. Especially the transfer learning approach results the need for very little training data and a steady improvement of the model towards specific movements.
+
+  - **Outcomes**: Using the model results in predicted x and y coordinates for the analysis of unseen data. This information can be postprocessed in a variety of other programs, e.g. to calculate general movement statistics like velocities, spatial displacement, angles between joints etc.
+  
+  - **Relation to the Project**: The method is non-invasive and doesn't require points that have to be previously put on structures of interest. Although it requires the points that have to be tracked to be visible and selectable (which is not the case in our material), it could still give valuable insights into the workflow of motion tracking without specific artificial points.
+
 - **Other Interesting Stuff**:
     - Keypoint Detection for Identifying Body Joints using TensorFlow [Link](https://dl.acm.org/doi/pdf/10.1145/3590837.3590948?casa_token=ElPrKE9p2k4AAAAA:hX18DHmKRVazLsZ6gusm59i3RhDYuEBwpQMpLkTn8ao77wVEk6DN8oLxmVHLP09YJsLdCEZexjiL)
     - A lightweight keypoint matching framework for insect wing morphometric landmark detection [Link](https://www.sciencedirect.com/science/article/abs/pii/S1574954122001443)
     - Animal Pose Estimation: Fine-tuning YOLOv8 Pose Models [Link](https://learnopencv.com/animal-pose-estimation/) [Video](https://www.youtube.com/watch?v=kb03ufEkOdA)
       Simalar approach as the StanfordExtra Paper/Repo with the same Dataset using yolo model & annotation instead of coco annotation which is possible easier to create from existing files of Fabian.
+
+- **Important features our model should have**
+- Visualization of the frames, including the generated tracking points for manual verification of the results
+- 
