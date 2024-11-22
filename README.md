@@ -12,7 +12,7 @@ Currently the pivot points are set manually every 10 frames and are interpolatet
 
 ### Task Type
 
-[Image Classification / Chatbot / Regression / Clustering / Other]
+2D Keypoint Detection
 
 ### Results Summary
 
