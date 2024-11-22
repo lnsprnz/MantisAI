@@ -1,4 +1,4 @@
-# [Your Project Title Here]
+## MantisAI - Identify pivot points between insect leg segments
 
 ## Repository Link
 
@@ -6,7 +6,9 @@
 
 ## Description
 
-[Short project description here. Briefly summarize the problem you are trying to solve and the approach you're taking.]
+The project will involve analyzing highspeed videos of the movement of the legs of an insect. It will be done on a black and white image stack (a couple thousand per video), the insect will be a praying mantis and the videos show the mantis catching a prey item (fly). The goal is, that the model can find the pivot points between the leg segments, so that from there it would be possible to calculate different parameters of the strike (e.g. angular velocities, angles, tangential velocities etc.)
+
+Currently the pivot points are set manually every 10 frames and are interpolateted. This is a huge effort
 
 ### Task Type
 
