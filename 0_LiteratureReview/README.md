@@ -117,6 +117,7 @@ The model seems to be very powerful. Especially the transfer learning approach r
   - **Relation to the Project**: The method is non-invasive and doesn't require points that have to be previously put on structures of interest. Although it requires the points that have to be tracked to be visible and selectable (which is not the case in our material), it could still give valuable insights into the workflow of motion tracking without specific artificial points.
 
 - **Other Interesting Stuff**:
+    - DeepLabCut https://github.com/DeepLabCut/DeepLabCut
     - Keypoint Detection for Identifying Body Joints using TensorFlow [Link](https://dl.acm.org/doi/pdf/10.1145/3590837.3590948?casa_token=ElPrKE9p2k4AAAAA:hX18DHmKRVazLsZ6gusm59i3RhDYuEBwpQMpLkTn8ao77wVEk6DN8oLxmVHLP09YJsLdCEZexjiL)
     - A lightweight keypoint matching framework for insect wing morphometric landmark detection [Link](https://www.sciencedirect.com/science/article/abs/pii/S1574954122001443)
     - Animal Pose Estimation: Fine-tuning YOLOv8 Pose Models [Link](https://learnopencv.com/animal-pose-estimation/) [Video](https://www.youtube.com/watch?v=kb03ufEkOdA)
