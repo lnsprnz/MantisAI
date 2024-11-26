@@ -127,3 +127,19 @@ The model seems to be very powerful. Especially the transfer learning approach r
 - **Important features our model should have**
 - Visualization of the frames, including the generated tracking points for manual verification of the results
 - 
+
+
+
+
+**Additional Resources to look at for unsupervised learning**
+
+https://github.com/antonilo/unsupervised_detection
+--> Unsupervised motion detection including heatmap of moving structures
+
+https://keras.io/examples/vision/video_classification/
+--> Can only determin if motions are different, maybe snippets of the code still useful
+
+https://keras.io/examples/vision/yolov8/
+--> Object detection, maybe the solution for boxes can be changed to ovals that fit our heatmap data
+
+
