@@ -10,12 +10,16 @@ Utilize statistical graphics, plots, and information tables to summarize the dat
 Provide information on the following issues:
 
 - **Dataset Overview**
+- High-speed videos in tif format (1024x1024). Large areas can be cropped to reduce size. One video consists of ~1000 images. 4 moving structures are to be defined and the associated pivot points between them to be determined.
 
 - **Missing Values**
+- Camera hat aussetzer (Ameisenbild).
 
 - **Feature Distributions**
+- 
 
 - **Possible Biases**
+- 
 
 - **Correlations**
 
