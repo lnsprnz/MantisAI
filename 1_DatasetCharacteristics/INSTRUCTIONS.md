@@ -28,3 +28,10 @@ Follow the instructions provided in brackets in the [Jupyter/Colab notebook](exp
 ## Submission
 
 Complete the [Jupyter/Colab notebook](exploratory_data_analysis.ipynb) to conduct your analysis of the dataset characteristics.
+
+
+
+
+
+**Link für HSPV Videos und andere Resources**
+https://cloud.rz.uni-kiel.de/index.php/s/aodq7z8ma7c8Szq
