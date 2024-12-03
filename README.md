@@ -30,4 +30,4 @@ Currently the pivot points are set manually every 10 frames and are interpolatet
 
 ## Cover Image
 
-![Project Cover Image](CoverImage/cover_image.png)
+![Project Cover Image](CoverImage/D2_AN04_S1_C001H001S0001000228_Beinsegmente+Pivotpoints (2).tiff)
