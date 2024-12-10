@@ -32,11 +32,13 @@ In our literature review, we did not find one perfect solutions, but many inspir
 Here, we decided to have a closer look at three different approaches.
 
 1) Mediapipe from Google. The tool is apparently best trrained for human parts, but the general approach would be ideal for our project. Here, the advantage would be, that the model is already designed to find pivot points on its own.
+- Prerequisite: Need to annotate own images on pivot points. Need to adjust convolutional network.
 
 2) Unsupervised detection using a preexisting repository of Antonilo, including heatmap generation of moving objects. The resulting heatmap data could be useful to calculate pivot points.
+- Unclear documentation and running of script.
 
-3) 
- 
+3) Keypoint_Detection
+- Prerequisite: Need to annotate own images on pivot points.
  
 
 ### Task Type
