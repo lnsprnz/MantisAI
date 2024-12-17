@@ -148,3 +148,9 @@ https://keras.io/examples/vision/yolov8/
 - Anscheinend kann das dann auch anzeigen wo es pivot points vermutet, eventuell funktioniert das gut und wir müssen nur noch fine tunen
 - Radio5 ist wohl noch eine Sache die nen großen Umfang an einfacher Bilderkennung hat
 - Unsere Trainingsdaten werden vmtl am Ende Tabellen sein wo viele links zu den einzelnen Ordnern sind, in denen widerum die Bilderstapel für die Videos in einer Cloud liegen, dann werden immer nur die Sachen geladen die für die aktuellen Schritte notwendig sind
+- 
+
+
+Source for Model Evaluation: https://github.com/tensorflow/models/blob/master/research/object_detection/metrics/coco_evaluation.py
+                              OKS value 
+
