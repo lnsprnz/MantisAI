@@ -1,0 +1,9 @@
+keras
+imgaug
+Pillow
+scikit-learn
+matplotlib
+tensorflow
+pandas
+numpy
+jsonschema
