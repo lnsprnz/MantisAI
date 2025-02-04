@@ -55,7 +55,7 @@ Here, we decided to have a closer look at three different approaches.
 
 1. **[Literature Review](0_LiteratureReview/README.md)**
 2. **[Dataset Characteristics](1_DatasetCharacteristics/README.md)**
-2. **[Model Definition and Evaluation](2_ModelREADNE.md)**
+2. **[Model Definition and Evaluation](2_ModelREADME.md)**
 4. **[Presentation](3_Presentation/README.md)**
 
 ## Cover Image
