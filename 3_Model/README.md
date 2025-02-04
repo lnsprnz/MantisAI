@@ -1,6 +1,6 @@
 # Model
 
-# **[Baseline Model & Model Training](mantis_keypoint_detection_training)**
+# **[Baseline Model & Model Training](mantis_keypoint_detection_training.ipynb)**
 
 ## **Overview**
 This project trains a deep learning model for **keypoint detection on mantises** using **convolutional neural networks (CNNs)**. Two models are implemented:
@@ -72,7 +72,7 @@ Run the notebook to train both models:
 3. Compare the performance with **[Prediction](mantis_keypoint_detection_prediction)**
 
 
-# **[Prediction](mantis_keypoint_detection_prediction)**
+# **[Prediction](mantis_keypoint_detection_prediction.ipynb)**
 
 This project uses a **trained deep learning model** to predict **mantis keypoints** in images. The model was trained using **transfer learning** and can now detect **five keypoints** on new test images.
 
@@ -152,7 +152,7 @@ plot_predictions(image_path, predicted_keypoints)
 - The model should detect and **plot five keypoints** on the test image.
 - The performance may vary depending on training quality and dataset diversity.
 
-# **[Evaluation OKS](evaluation)**
+# **[Evaluation OKS](evaluation.ipynb)**
 
 This project evaluates the performance of a trained **mantis keypoint detection model** using **Object Keypoint Similarity (OKS)**. The OKS metric quantifies the accuracy of keypoint predictions by comparing them to ground-truth annotations.
 
@@ -230,7 +230,7 @@ print(f"Model Accuracy: {accuracy:.2%}")
 ## **Expected Output**
 - A percentage score indicating the **model's accuracy** in detecting keypoints.
 
-# **[Evaluation Boxplot](evaluation_boxplot)**
+# **[Evaluation Boxplot](evaluation_boxplot.ipynb)**
 
 
 This project evaluates the performance of a **mantis keypoint detection model** by visualizing the **Euclidean distances** between predicted keypoints and ground-truth keypoints using **boxplots**. The goal is to analyze the **error distribution** rather than relying on Object Keypoint Similarity (OKS), which performed poorly due to model inaccuracies.
