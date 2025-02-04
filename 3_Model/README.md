@@ -1,19 +1,20 @@
 # Model
 
-## **[Baseline Model & Model Training](mantis_keypoint_detection_training)**
+# **[Baseline Model & Model Training](mantis_keypoint_detection_training)**
 
+## **Overview**
 This project trains a deep learning model for **keypoint detection on mantises** using **convolutional neural networks (CNNs)**. Two models are implemented:
 1. **Baseline Model** – A simple CNN trained from scratch.
 2. **Trained Model** – Uses **transfer learning** (e.g., MobileNetV2) for improved performance.
 
-# **Installation**
+## **Installation**
 Install the required dependencies:
 
 ```sh
 pip install imgaug keras tensorflow scikit-learn pandas numpy
 ```
 
-# **Dataset**
+## **Dataset**
 The dataset consists of:
 - **Mantis images** (`train/`)
 - **JSON annotations** defining keypoints (`MantisTrain.json`)
@@ -27,7 +28,7 @@ JSON = "path/to/MantisTrain.json"
 KEYPOINT_DEF = "path/to/MantisKeypointDef.csv"
 ```
 
-# **Baseline Model**
+## **Baseline Model**
 A simple CNN trained from scratch:
 
 ```python
@@ -44,7 +45,7 @@ baseline_model = tf.keras.Sequential([
 ])
 ```
 
-# **Trained Model (Transfer Learning)**
+## **Trained Model (Transfer Learning)**
 Uses **MobileNetV2** as a feature extractor:
 
 ```python
@@ -63,7 +64,7 @@ model = tf.keras.Sequential([
 ])
 ```
 
-# **Training the Models**
+## **Training the Models**
 Run the notebook to train both models:
 
 1. Train the **baseline model**.
@@ -71,11 +72,11 @@ Run the notebook to train both models:
 3. Compare the performance with **[Prediction](mantis_keypoint_detection_prediction)**
 
 
-## **[Prediction](mantis_keypoint_detection_prediction)**
+# **[Prediction](mantis_keypoint_detection_prediction)**
 
 This project uses a **trained deep learning model** to predict **mantis keypoints** in images. The model was trained using **transfer learning** and can now detect **five keypoints** on new test images.
 
-# **Requirements**
+## **Requirements**
 Before running the prediction script, install the required dependencies:
 
 ```sh
@@ -84,7 +85,7 @@ pip install keras tensorflow imgaug scikit-learn pandas numpy matplotlib pillow
 
 Ensure that you have a trained model available from the previous training notebook **[Baseline Model & Model Training](mantis_keypoint_detection_training)**.
 
-# **Dataset**
+## **Dataset**
 The test dataset should include:
 - **Test images directory** (`test/`)
 - **JSON annotation file** (`MantisTest.json`)
@@ -98,7 +99,7 @@ JSON_TEST = "path/to/MantisTest.json"
 KEYPOINT_DEF = "path/to/MantisKeypointDef.csv"
 ```
 
-# **Loading the Model**
+## **Loading the Model**
 Make sure to load the trained model from  before making predictions:
 
 ```python
@@ -107,7 +108,7 @@ from tensorflow.keras.models import load_model
 model = load_model("path/to/trained_model.h5")
 ```
 
-# **Performing Predictions**
+## **Performing Predictions**
 To make predictions:
 1. Load the test images and their corresponding JSON annotations.
 2. Preprocess the images (resize, normalize).
@@ -126,7 +127,7 @@ def predict_keypoints(model, image_path):
     return predictions.reshape(-1, 2)  # Convert flat output into (x, y) pairs
 ```
 
-# **Visualizing Predictions**
+## **Visualizing Predictions**
 To visualize the predicted keypoints:
 
 ```python
@@ -147,15 +148,15 @@ predicted_keypoints = predict_keypoints(model, image_path)
 plot_predictions(image_path, predicted_keypoints)
 ```
 
-# **Expected Results**
+## **Expected Results**
 - The model should detect and **plot five keypoints** on the test image.
 - The performance may vary depending on training quality and dataset diversity.
 
-**[Evaluation OKS](evaluation)**
+# **[Evaluation OKS](evaluation)**
 
 This project evaluates the performance of a trained **mantis keypoint detection model** using **Object Keypoint Similarity (OKS)**. The OKS metric quantifies the accuracy of keypoint predictions by comparing them to ground-truth annotations.
 
-# **What is OKS?**
+## **What is OKS?**
 - OKS measures the **similarity** between predicted and ground-truth keypoints.
 - It considers **spatial distance**, **object scale**, and **keypoint visibility**.
 - **OKS values range from 0 to 1**, where **1 indicates a perfect match**.
@@ -163,14 +164,14 @@ This project evaluates the performance of a trained **mantis keypoint detection 
   - OKS ≥ 0.75 → **True Positive**  
   - OKS < 0.75 → **False Positive**
 
-# **Installation**
+## **Installation**
 Install the required dependencies:
 
 ```sh
 pip install torch numpy pandas matplotlib
 ```
 
-# **Evaluation Process**
+## **Evaluation Process**
 1. **Load the test dataset** (keypoints and areas).
 2. **Compute OKS** between predicted and ground-truth keypoints.
 3. **Determine accuracy** based on the 0.75 threshold.
@@ -184,7 +185,7 @@ JSON_TEST = "path/to/MantisTest.json"
 KEYPOINT_DEF = "path/to/MantisKeypointDef.csv"
 ```
 
-# **Running the OKS Evaluation**
+### **Running the OKS Evaluation**
 OKS is computed as follows:
 
 ```python
@@ -213,7 +214,7 @@ def keypoint_similarity(gt_kpts, pred_kpts, sigmas, areas):
     return oks
 ```
 
-# **Interpreting the Results**
+### **Interpreting the Results**
 - **OKS scores** are calculated for each keypoint.
 - **Final model accuracy** is based on how many OKS values exceed 0.75.
 
@@ -226,26 +227,27 @@ accuracy = true_positives / (true_positives + false_positives)
 print(f"Model Accuracy: {accuracy:.2%}")
 ```
 
-# **Expected Output**
+## **Expected Output**
 - A percentage score indicating the **model's accuracy** in detecting keypoints.
 
-## **[Evaluation Boxplot](evaluation_boxplot)**
+# **[Evaluation Boxplot](evaluation_boxplot)**
+
 
 This project evaluates the performance of a **mantis keypoint detection model** by visualizing the **Euclidean distances** between predicted keypoints and ground-truth keypoints using **boxplots**. The goal is to analyze the **error distribution** rather than relying on Object Keypoint Similarity (OKS), which performed poorly due to model inaccuracies.
 
-# **Why Use Boxplots?**
+## **Why Use Boxplots?**
 - Boxplots provide a **clear visualization** of prediction errors.
 - They show the **distribution of keypoint errors** across different keypoints.
 - Help identify **outliers and overall model accuracy trends**.
 
-# **Installation**
+## **Installation**
 Install the required dependencies:
 
 ```sh
 pip install numpy matplotlib json
 ```
 
-# **Data Preparation**
+## **Data Preparation**
 The input data consists of a **JSON file** containing **predicted** and **ground-truth keypoints**.
 
 - The JSON file should follow this format:
@@ -266,7 +268,7 @@ The input data consists of a **JSON file** containing **predicted** and **ground
 json_path = "path/to/predictions.json"
 ```
 
-# **Distance Calculation**
+## **Distance Calculation**
 The script computes the **Euclidean distance** between each predicted and ground-truth keypoint:
 
 ```python
@@ -277,7 +279,7 @@ def calculate_distance(point1, point2):
     return np.sqrt((point1[0] - point2[0])**2 + (point1[1] - point2[1])**2)
 ```
 
-# **Boxplot Visualization**
+## **Boxplot Visualization**
 To visualize keypoint prediction errors:
 
 ```python
@@ -291,12 +293,12 @@ plt.grid(axis='y')
 plt.show()
 ```
 
-# **Interpreting the Boxplots**
+## **Interpreting the Boxplots**
 - **Small interquartile range (IQR)** → Low variance (better accuracy).
 - **Large spread or many outliers** → Model struggles with specific keypoints.
 - **Keypoints with consistently high errors** → Likely **need more training data** or **better model fine-tuning**.
 
-# **Next Steps**
+## **Next Steps**
 - **Improve model training**: Add more data augmentation or fine-tune with more epochs.
 - **Identify keypoints with high variance**: Consider revising dataset annotations.
 - **Compare different models**: Use boxplots to compare multiple architectures.
