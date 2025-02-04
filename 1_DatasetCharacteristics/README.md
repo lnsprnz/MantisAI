@@ -1,3 +1,12 @@
 # Dataset Characteristics
 
-**[Notebook](exploratory_data_analysis.ipynb)**
+## Dataset Overview
+
+
+## Missing Values
+
+## Feature Distribution
+
+## Possible Biases
+
+## Correlations
