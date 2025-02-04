@@ -54,8 +54,8 @@ Here, we decided to have a closer look at three different approaches.
 ## Documentation
 
 1. **[Literature Review](0_LiteratureReview/README.md)**
-2. **[Dataset Characteristics](1_DatasetCharacteristics/exploratory_data_analysis.ipynb)**
-2. **[Model Definition and Evaluation](2_Model/model_definition_evaluation)**
+2. **[Dataset Characteristics](1_DatasetCharacteristics/README.md)**
+2. **[Model Definition and Evaluation](2_ModelREADNE.md)**
 4. **[Presentation](3_Presentation/README.md)**
 
 ## Cover Image
