@@ -26,27 +26,28 @@ There are 5 points of interest on this animal that we would like to track: 1) th
 
 Figure 3 - Larvae of _Hierodula majuscula_ in 6th instar in different phases of the strike, from the approach up to the catch of the prey item. The 5 tracking points and their corresponding angles are denoted as described.
 
-**Update finding model**
-Our videos contain approximately 1000-2000 images, depending on the file. They are in format 1024x1024 - it is possible to crop a large empty party of all images to reduce the size. In the end, we want to find the pivot points of specific joints in the animal and get their coordinates for every frame. These coordinates should be exported as a text file for further analysis.
+
+**Update to finding a model**
+Our videos contain approximately 1000-2000 images, depending on the file. They are in format 1024x1024 - it would be possible to crop a large empty party of all images to reduce the size. In the end, we want to find the pivot points of specific joints in the animal and get their coordinates for every frame. These coordinates should be exported as a text file for further analysis.
 Ideally, the process should be based on unsupervised object detection, but we also found other possible solutions that may also include some manual key point labeling.
- 
 In our literature review, we did not find one perfect solutions, but many inspirations to try out and maybe combine. We now try to identify the best possible model that we could use as a starting point to build on.
 
-Here, we decided to have a closer look at three different approaches.
+From our research, we decided to have a closer look at three different approaches:
 
-1) Mediapipe from Google. The tool is apparently best trrained for human parts, but the general approach would be ideal for our project. Here, the advantage would be, that the model is already designed to find pivot points on its own.
-- Prerequisite: Need to annotate own images on pivot points. Need to adjust convolutional network.
+1) Mediapipe from Google. The tool is apparently best trained for human parts, but the general approach would be ideal for our project. The advantage would be, that the model is already designed to find pivot points on its own.
+    -> Prerequisite: Need to annotate own images on pivot points. Need to adjust convolutional network.
 
 2) Unsupervised detection using a preexisting repository of Antonilo, including heatmap generation of moving objects. The resulting heatmap data could be useful to calculate pivot points.
-- Unclear documentation and running of script.
+    -> Unclear documentation and running of script.
 
 3) Keypoint_Detection
-- Prerequisite: Need to annotate own images on pivot points.
- 
+    -> Prerequisite: Need to annotate own images on pivot points.
 
-### Task Type
+### Final approach
 
-2D Keypoint Detection
+After playing around with different ideas and approaches, we decided to use the Keypoint_Detection. As a prerequisite of this model, we need the information about the tracking points as a .jason file. We found Roboflow (https://roboflow.com/) to be an ideal solution to manually annotate the tracking points on the high-speed video images, generate a dataset from that and export it as .jason file.
+
+We used 220 images from obtained high-speed videos, and further diversified our training dataset by using different augmentation methods.
 
 ### Results Summary
 
