@@ -143,17 +143,19 @@ https://keras.io/examples/vision/yolov8/
 --> Object detection, maybe the solution for boxes can be changed to ovals that fit our heatmap data
 
 
-**Comments from Steffen**
-- mediapipe von google -> kann wohl sehr gut einzelne sich bewegende Teile erkennen (zB alle Fingerglieder einer Hand), ist aber spezifisch auf Menschen trainiert -> hier müssen wir einmal schauen ob das auf unsere Daten funktioniert (https://github.com/google-ai-edge/mediapipe)
-- Anscheinend kann das dann auch anzeigen wo es pivot points vermutet, eventuell funktioniert das gut und wir müssen nur noch fine tunen
-- Radio5 ist wohl noch eine Sache die nen großen Umfang an einfacher Bilderkennung hat
-- Unsere Trainingsdaten werden vmtl am Ende Tabellen sein wo viele links zu den einzelnen Ordnern sind, in denen widerum die Bilderstapel für die Videos in einer Cloud liegen, dann werden immer nur die Sachen geladen die für die aktuellen Schritte notwendig sind
-- 
+**Comments/Suggestions from instructor Steffen**
+ https://github.com/google-ai-edge/mediapipe
+- Apparently, mediapipe can also indicate where it detects pivot points. Maybe it works well, and we only need to fine-tune it.
+- Radio5 is probably something that has a large scope for simple image recognition.
+- Our training data will probably end up being tables with many links to individual folders, where the image stacks for the videos are stored in a cloud. Only the necessary data for the current steps will be loaded at any given time.
 
 
-Source for Model Evaluation: https://github.com/tensorflow/models/blob/master/research/object_detection/metrics/coco_evaluation.py
-                              OKS value 
-                              also: https://cocodataset.org/#keypoints-eval
-                              source for coding oks: https://learnopencv.com/object-keypoint-similarity/
+**Source for Model Evaluation**
+Object keypoint similarity (OKS)
+- https://github.com/tensorflow/models/blob/master/research/object_detection/metrics/coco_evaluation.py
+                              
+- also: https://cocodataset.org/#keypoints-eval
 
-Source for image augmentation: https://github.com/albumentations-team/albumentations
+- source for coding oks: https://learnopencv.com/object-keypoint-similarity/
+
+- source for image augmentation: https://github.com/albumentations-team/albumentations
